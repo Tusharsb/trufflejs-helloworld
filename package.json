@@ -1,0 +1,17 @@
+{
+  "name": "truffle-helloworld",
+  "version": "1.0.0",
+  "description": "ToDoList App in solidity. Built on Truffle Framework",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "author": "Tushar Goswami",
+  "license": "ISC",
+  "dependencies": {
+    "openzeppelin-solidity": "^2.1.1"
+  }
+}
