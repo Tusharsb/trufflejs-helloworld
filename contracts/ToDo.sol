@@ -1,6 +1,8 @@
 pragma solidity ^0.5.0;
 
-contract ToDo {
+import 'openzeppelin-solidity/contracts/ownership/Ownable.sol';
+
+contract ToDo is Ownable {
     
     struct ToDoItem{
         string label; //the todo string
@@ -15,7 +17,7 @@ contract ToDo {
     ToDoItem[] public ToDoItems;
     
     // let user createTask by giving input of 'label'. because it is 'public' hence it can be called by any programmer from their web application. 
-    function createTask(string memory label) public returns(uint256) {
+    function createTask(string memory label) public onlyOwner returns(uint256) {
         
         // Create a temporary variable that will be used to hold the data of todo item
         // because it declared using 'memory' hence this variable will be destroyed after end of this function 
